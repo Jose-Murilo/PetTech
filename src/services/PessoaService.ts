@@ -8,14 +8,10 @@ export class PessoaService {
     const pessoa = new Pessoa(nome);
 
     if (!pessoa.validar()) {
-      throw new Error(
-        "O nome deve possuir pelo menos 3 caracteres"
-      );
+      throw new Error("O nome deve possuir pelo menos 3 caracteres");
     }
 
-    return this.repository.criar(
-      pessoa.getNome()
-    );
+    return this.repository.criar(pessoa.getNome());
   }
 
   async listar() {

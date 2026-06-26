@@ -62,7 +62,7 @@ comentarioRoutes.post("/", controller.criar.bind(controller));
  */
 comentarioRoutes.get(
   "/post/:postId",
-  controller.listarPorPost.bind(controller)
+  controller.listarPorPost.bind(controller),
 );
 
 export { comentarioRoutes };

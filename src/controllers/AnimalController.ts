@@ -9,10 +9,7 @@ export class AnimalController {
   async criar(req: Request, res: Response) {
     try {
       const fotoUrl = req.file
-        ? await this.uploadService.uploadImage(
-            req.file.path,
-            "pettech/animals"
-          )
+        ? await this.uploadService.uploadImage(req.file.path, "pettech/animals")
         : undefined;
 
       const animal = await this.service.criar({

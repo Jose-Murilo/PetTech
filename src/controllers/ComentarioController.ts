@@ -19,16 +19,14 @@ export class ComentarioController {
     } catch (error) {
       return res.status(400).json({
         erro:
-          error instanceof Error
-            ? error.message
-            : "Erro ao criar comentário",
+          error instanceof Error ? error.message : "Erro ao criar comentário",
       });
     }
   }
 
   async listarPorPost(req: Request, res: Response) {
     const comentarios = await this.service.listarPorPost(
-      Number(req.params.postId)
+      Number(req.params.postId),
     );
 
     return res.json(comentarios);

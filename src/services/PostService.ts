@@ -25,7 +25,7 @@ export class PostService {
       data.animalId,
       data.titulo,
       data.conteudo,
-      data.fotoUrl
+      data.fotoUrl,
     );
 
     post.validar();

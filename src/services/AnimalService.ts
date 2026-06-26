@@ -26,7 +26,7 @@ export class AnimalService {
       data.primeirosSocorros,
       data.raca,
       data.especieOutro,
-      data.fotoUrl
+      data.fotoUrl,
     );
 
     animal.validar();

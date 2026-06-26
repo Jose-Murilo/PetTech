@@ -48,7 +48,7 @@ const controller = new PostController();
 postRoutes.post(
   "/",
   postUpload.single("foto"),
-  controller.criar.bind(controller)
+  controller.criar.bind(controller),
 );
 
 /**
@@ -79,9 +79,6 @@ postRoutes.get("/", controller.listar.bind(controller));
  *       200:
  *         description: Post curtido com sucesso
  */
-postRoutes.patch(
-  "/:id/curtir",
-  controller.curtir.bind(controller)
-);
+postRoutes.patch("/:id/curtir", controller.curtir.bind(controller));
 
 export { postRoutes };

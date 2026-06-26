@@ -27,11 +27,7 @@ export class ComentarioService {
       throw new Error("Post não encontrado");
     }
 
-    const comentario = new Comentario(
-      data.pessoaId,
-      data.postId,
-      data.texto
-    );
+    const comentario = new Comentario(data.pessoaId, data.postId, data.texto);
 
     comentario.validar();
 

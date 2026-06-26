@@ -21,12 +21,7 @@ app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/pessoas", pessoaRoutes);
 app.use("/animais", animalRoutes);
-app.use(
-  "/uploads",
-  express.static(
-    path.resolve(process.cwd(), "uploads")
-  )
-);
+app.use("/uploads", express.static(path.resolve(process.cwd(), "uploads")));
 app.use("/posts", postRoutes);
 app.use("/comentarios", comentarioRoutes);
 

@@ -66,7 +66,7 @@ const controller = new AnimalController();
 animalRoutes.post(
   "/",
   upload.single("foto"),
-  controller.criar.bind(controller)
+  controller.criar.bind(controller),
 );
 
 /**
